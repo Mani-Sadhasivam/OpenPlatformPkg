@@ -387,6 +387,13 @@ RegulatorEenable (
     DEBUG ((DEBUG_WARN, "Warning: Couldn't Set LDO28 ON (status: %r)\n", Status));
   }
 
+  /* LDO33 enable */
+  RegVal = 0x01;
+  Status = mSpmiIo->Write(mSpmiIo, SPMI_SLAVEID_HI6421v600, PMIC_LDO33_ONOFF_ADDR, (UINT8*)&RegVal, 1);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_WARN, "Warning: Couldn't Set LDO33 ON (status: %r)\n", Status));
+  }
+
   return EFI_SUCCESS;
 }
 #endif

@@ -63,7 +63,9 @@
 #define PMIC_OSC32K_ONOFF_CTRL_EN_32K           (1 << 1)
 
 #define PMIC_LDO28_VSET_ADDR					0x069
+#define PMIC_LDO33_VSET_ADDR					0x06D
 #define PMIC_LDO28_ONOFF_ADDR					0x02E
+#define PMIC_LDO33_ONOFF_ADDR					0x032
 
 #define CRG_REG_BASE                            0xFFF35000
 
